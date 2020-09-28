@@ -9,7 +9,7 @@ public class TestIOC {
 		// 1. Initialize Spring Container and load the config file
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-		// 2. Obtain the instance through the container
+		// 2. Obtain the instance through the Spring Container
 		UserDao userDao = (UserDao) applicationContext.getBean("userDao");
 
 		// 3. Call the method

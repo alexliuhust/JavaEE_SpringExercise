@@ -1,0 +1,14 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+	<!-- Configure Factory -->
+	<bean id="myBean3Factory" class="com.alex.instance.factory.MyBean3Factory"></bean>
+	
+	<!-- Configure Bean3: 
+		Use the attribute factory-bean to point to the instantiated factory; 
+		use the attribute factory-method to identify which method to use -->
+	<bean id="bean3" factory-bean="myBean3Factory" factory-method="createBean"></bean>
+
+</beans>
